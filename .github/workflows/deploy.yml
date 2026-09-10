@@ -33,6 +33,9 @@ jobs:
       - name: Abhängigkeiten installieren
         run: npm ci
 
+      - name: Quartz-Theme installieren
+        run: npm install --no-save --package-lock=false --ignore-scripts @quartz-themes/default@1.0.1
+
       - name: Quartz-Plugins installieren
         run: npx quartz plugin install --from-config
 
