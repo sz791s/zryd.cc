@@ -106,7 +106,9 @@ export const JournalFrame: PageFrame = {
                   ))}
                 </ul>
               ) : (
-                <p class="empty-notes">Hier ist noch Platz. Die ersten Notizen folgen.</p>
+                <p class="empty-notes">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
               )}
             </section>
           )}

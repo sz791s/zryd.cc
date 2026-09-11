@@ -1,11 +1,11 @@
 ---
 title: Über mich
-description: Simon Zryd und seine Projekte.
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 type: page
 ---
 
-Ich bin Simon Zryd. Auf dieser Seite ist Platz für Gedanken, Notizen und eigene Projekte.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-## Woran ich arbeite
+## Dolor sit amet
 
-Zurzeit entwickle ich **JollyPod**, eine Podcast-App. Hier möchte ich nach und nach Einblicke in meine Arbeit teilen.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.

@@ -1,13 +1,11 @@
 ---
 title: Simon Zryd
-description: Notizen, Ideen und kleine Projekte von Simon Zryd.
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 type: page
 ---
 
-Notizen, Ideen und kleine Projekte.
+Lorem ipsum dolor sit amet.
 
-Willkommen in meinem persönlichen Notizbuch. Hier sammle ich Gedanken und teile, woran ich gerade arbeite.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-Zurzeit entsteht **JollyPod**, meine Podcast-App.
-
-[[Über mich|Ein bisschen mehr über mich →]]
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
