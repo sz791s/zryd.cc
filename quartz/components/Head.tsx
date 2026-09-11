@@ -43,6 +43,9 @@ export default (() => {
       <head>
         <title>{title}</title>
         <meta charSet="utf-8" />
+        {fileData.slug === "404" && (
+          <base href={ctx.argv.serve ? "/" : url.pathname.replace(/\/$/, "") + "/"} />
+        )}
         {coreStylesheet && <link rel="preload" href={coreStylesheet} as="style" />}
         {coreScript && coreScript.contentType === "external" && (
           <link rel="preload" href={coreScript.src} as="script" />

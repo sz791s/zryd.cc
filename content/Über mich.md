@@ -1,10 +1,11 @@
 ---
 title: Über mich
-description: Eine kurze Vorstellung.
+description: Simon Zryd und seine Projekte.
+type: page
 ---
 
-# Über mich
+Ich bin Simon Zryd. Auf dieser Seite ist Platz für Gedanken, Notizen und eigene Projekte.
 
-Hier entsteht später eine kurze Vorstellung.
+## Woran ich arbeite
 
-Diese Seite ist eine normale Markdown-Datei und kann direkt in Obsidian bearbeitet werden.
+Zurzeit entwickle ich **JollyPod**, eine Podcast-App. Hier möchte ich nach und nach Einblicke in meine Arbeit teilen.
