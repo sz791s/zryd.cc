@@ -39,6 +39,9 @@ jobs:
       - name: Website bauen
         run: npx quartz build
 
+      - name: Feed prüfen
+        run: node --test tests/wsocial-feed.test.mjs
+
       - name: Website-Artefakt hochladen
         uses: actions/upload-pages-artifact@v3
         with:

@@ -80,6 +80,41 @@ export const JournalFrame: PageFrame = {
             <Content {...componentData} />
           )}
           {home && (
+            <section
+              class="journal-feed"
+              aria-labelledby="feed-title"
+              data-wsocial-feed
+              data-actor="did:plc:jaizqvad23fmiexrhvhrc4fh"
+            >
+              <div class="section-heading">
+                <h2 id="feed-title">Beiträge</h2>
+                <a
+                  href="https://wsocial.eu/profile/simonzryd.wsocial.eu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  W Social <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+              <p class="feed-status" data-feed-status role="status">
+                Die Beiträge findest du auch direkt auf W Social.
+              </p>
+              <ul class="social-posts" data-feed-posts />
+              <button class="feed-retry" type="button" data-feed-retry hidden>
+                Erneut laden
+              </button>
+              <p class="feed-more">
+                <a
+                  href="https://wsocial.eu/profile/simonzryd.wsocial.eu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Alle Beiträge auf W Social <span aria-hidden="true">↗</span>
+                </a>
+              </p>
+            </section>
+          )}
+          {home && notes.length > 0 && (
             <section class="journal-notes" id="notizen" aria-labelledby="notes-title">
               <div class="section-heading">
                 <h2 id="notes-title">Notizen</h2>
@@ -87,29 +122,21 @@ export const JournalFrame: PageFrame = {
                   RSS <span aria-hidden="true">↗</span>
                 </a>
               </div>
-              {notes.length ? (
-                <ul class="note-list">
-                  {notes.map((note) => (
-                    <li>
-                      <a class="note-title" href={href(note.slug!)}>
-                        {note.frontmatter?.title}
-                      </a>
-                      {note.dates && (
-                        <time dateTime={note.dates.created.toISOString()}>
-                          {dateLabel(note.dates.created)}
-                        </time>
-                      )}
-                      {note.frontmatter?.description && (
-                        <p>{String(note.frontmatter.description)}</p>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p class="empty-notes">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-              )}
+              <ul class="note-list">
+                {notes.map((note) => (
+                  <li>
+                    <a class="note-title" href={href(note.slug!)}>
+                      {note.frontmatter?.title}
+                    </a>
+                    {note.dates && (
+                      <time dateTime={note.dates.created.toISOString()}>
+                        {dateLabel(note.dates.created)}
+                      </time>
+                    )}
+                    {note.frontmatter?.description && <p>{String(note.frontmatter.description)}</p>}
+                  </li>
+                ))}
+              </ul>
             </section>
           )}
           {!home && (
@@ -126,6 +153,7 @@ export const JournalFrame: PageFrame = {
           </div>
         </footer>
         <script src={href("static/journal.js")} defer />
+        {home && <script src={href("static/wsocial-feed.js")} type="module" />}
       </div>
     )
   },
