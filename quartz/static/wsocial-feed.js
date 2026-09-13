@@ -1,5 +1,14 @@
 const API = "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed"
 const SOCIAL = "https://wsocial.eu"
+export const REFRESH_INTERVAL = 60_000
+const feedStates = new WeakMap()
+
+function isQuote(post) {
+  // Check both the original record and the resolved view, including quotes with media.
+  return [post.record?.embed?.$type, post.embed?.$type].some((type) =>
+    /^app\.bsky\.embed\.record(?:WithMedia)?(?:#view)?$/.test(type ?? ""),
+  )
+}
 
 export function safeUrl(value) {
   try {
@@ -62,7 +71,8 @@ export function selectPosts(feed, actor, limit = 10) {
         !post ||
         reason?.$type === "app.bsky.feed.defs#reasonRepost" ||
         post.author?.did !== actor ||
-        post.record?.reply
+        post.record?.reply ||
+        isQuote(post)
       )
         return false
       if (
@@ -104,7 +114,7 @@ function richText(record) {
   return paragraph
 }
 
-function renderMedia(embed, original, depth = 0) {
+function renderMedia(embed, original) {
   const fragment = document.createDocumentFragment()
   if (!embed) return fragment
   if (embed.$type === "app.bsky.embed.images#view") {
@@ -153,31 +163,6 @@ function renderMedia(embed, original, depth = 0) {
     }
     videoLink.append(element("span", undefined, "Video auf W Social ansehen ↗"))
     fragment.append(videoLink)
-  } else if (embed.$type === "app.bsky.embed.recordWithMedia#view") {
-    fragment.append(
-      renderMedia(embed.media, original, depth),
-      renderMedia(embed.record, original, depth),
-    )
-  } else if (embed.$type === "app.bsky.embed.record#view" && depth < 1) {
-    const quoted = embed.record
-    const href = postUrl(quoted?.uri)
-    if (quoted?.$type === "app.bsky.embed.record#viewRecord" && href) {
-      const quote = element("blockquote", "social-quote")
-      quote.append(
-        link(
-          href,
-          quoted.author?.displayName || quoted.author?.handle || "Zitierter Beitrag",
-          "social-quote-author",
-        ),
-      )
-      quote.append(richText(quoted.value))
-      for (const media of quoted.embeds ?? []) quote.append(renderMedia(media, href, depth + 1))
-      fragment.append(quote)
-    } else {
-      fragment.append(
-        link(original, "Zitierten Beitrag auf W Social ansehen ↗", "social-quote-link"),
-      )
-    }
   }
   return fragment
 }
@@ -207,12 +192,21 @@ function renderPost(post) {
 }
 
 export async function loadFeed(root) {
+  let state = feedStates.get(root)
+  if (!state) {
+    state = { loading: false, loaded: false, items: new Map() }
+    feedStates.set(root, state)
+  }
+  if (state.loading) return
+  state.loading = true
   const status = root.querySelector("[data-feed-status]")
   const list = root.querySelector("[data-feed-posts]")
   const retry = root.querySelector("[data-feed-retry]")
   root.setAttribute("aria-busy", "true")
-  status.hidden = false
-  status.textContent = "Beiträge werden geladen …"
+  if (!state.loaded) {
+    status.hidden = false
+    status.textContent = "Beiträge werden geladen …"
+  }
   retry.hidden = true
   try {
     const url = new URL(API)
@@ -230,22 +224,90 @@ export async function loadFeed(root) {
     const data = await response.json()
     if (!Array.isArray(data.feed)) throw new Error("Invalid feed response")
     const posts = selectPosts(data.feed, root.dataset.actor)
-    list.replaceChildren(...posts.map(renderPost))
+    // Reuse unchanged posts so periodic checks preserve focus and already loaded images.
+    const nextItems = new Map()
+    posts.forEach((post, index) => {
+      const signature = JSON.stringify([post.record, post.embed])
+      let item = state.items.get(post.uri)
+      if (item?.signature !== signature) item = { signature, node: renderPost(post) }
+      nextItems.set(post.uri, item)
+      if (list.children[index] !== item.node)
+        list.insertBefore(item.node, list.children[index] ?? null)
+    })
+    while (list.children.length > posts.length) list.lastElementChild.remove()
+    state.items = nextItems
+    state.loaded = true
     status.textContent = posts.length ? "" : "Noch keine eigenen Beiträge vorhanden."
     status.hidden = posts.length > 0
   } catch {
-    status.textContent =
-      "Die Beiträge sind gerade nicht erreichbar. Du findest sie direkt auf W Social."
+    status.hidden = false
+    status.textContent = state.loaded
+      ? "Die Aktualisierung ist gerade nicht möglich. Wir versuchen es automatisch erneut."
+      : "Die Beiträge sind gerade nicht erreichbar. Du findest sie direkt auf W Social."
     retry.hidden = false
   } finally {
     root.setAttribute("aria-busy", "false")
+    state.loading = false
+  }
+}
+
+export function startFeed(root) {
+  let timer
+  let running = false
+  let paused = false
+  let lastAttempt = -Infinity
+  const active = () => !paused && !document.hidden && navigator.onLine !== false
+
+  async function refresh(force = false) {
+    clearTimeout(timer)
+    if (running || !active()) return
+    if (force || Date.now() - lastAttempt >= REFRESH_INTERVAL) {
+      running = true
+      lastAttempt = Date.now()
+      try {
+        await loadFeed(root)
+      } finally {
+        running = false
+      }
+    }
+    if (active()) {
+      timer = setTimeout(refresh, Math.max(1, REFRESH_INTERVAL - (Date.now() - lastAttempt)))
+    }
+  }
+
+  const onVisibility = () => refresh()
+  const onOnline = () => refresh(true)
+  const onOffline = () => clearTimeout(timer)
+  const onPageHide = () => {
+    paused = true
+    clearTimeout(timer)
+  }
+  const onPageShow = () => {
+    paused = false
+    refresh()
+  }
+  const onRetry = () => refresh(true)
+  document.addEventListener("visibilitychange", onVisibility)
+  window.addEventListener("online", onOnline)
+  window.addEventListener("offline", onOffline)
+  window.addEventListener("pagehide", onPageHide)
+  window.addEventListener("pageshow", onPageShow)
+  root.querySelector("[data-feed-retry]").addEventListener("click", onRetry)
+  refresh(true)
+
+  return () => {
+    paused = true
+    clearTimeout(timer)
+    document.removeEventListener("visibilitychange", onVisibility)
+    window.removeEventListener("online", onOnline)
+    window.removeEventListener("offline", onOffline)
+    window.removeEventListener("pagehide", onPageHide)
+    window.removeEventListener("pageshow", onPageShow)
+    root.querySelector("[data-feed-retry]").removeEventListener("click", onRetry)
   }
 }
 
 if (typeof document !== "undefined") {
   const root = document.querySelector("[data-wsocial-feed]")
-  if (root) {
-    root.querySelector("[data-feed-retry]").addEventListener("click", () => loadFeed(root))
-    loadFeed(root)
-  }
+  if (root) startFeed(root)
 }

@@ -25,7 +25,9 @@ Die Website ist unter **https://sz791s.github.io/zryd.cc/** erreichbar. GitHub P
 
 ## W-Social-Feed
 
-Auf der Startseite werden die zehn neuesten eigenen Beiträge von `simonzryd.wsocial.eu` angezeigt. Der Feed wird bei jedem Seitenaufruf über die öffentliche AT-Protocol-Schnittstelle von `public.api.bsky.app` geladen; ein Login oder erneutes Veröffentlichen der Website ist dafür nicht nötig. Reposts und Antworten werden ausgeblendet. Bilder, Linkvorschauen und zitierte Beiträge bleiben erhalten; Videos führen zum Original auf W Social.
+Auf der Startseite werden bis zu zehn der neuesten eigenen Beiträge von `simonzryd.wsocial.eu` angezeigt. Der Feed wird bei jedem Seitenaufruf über die öffentliche AT-Protocol-Schnittstelle von `public.api.bsky.app` geladen und bei sichtbarer Seite etwa jede Minute aktualisiert. Bei der Rückkehr zu einem länger inaktiven Tab oder nach Wiederherstellung der Verbindung wird erneut geprüft. Ein Login oder erneutes Veröffentlichen der Website ist dafür nicht nötig. Reposts, Antworten und komplette Quote-Posts (auch mit Bildern oder Videos) werden ausgeschlossen. Eigene Bilder und Linkvorschauen bleiben erhalten; Videos führen zum Original auf W Social.
+
+Unveränderte Beiträge werden beim Aktualisieren nicht neu gezeichnet. Bei einem vorübergehenden Fehler bleiben die zuletzt geladenen Beiträge stehen. Der Feed ist eine Live-Ansicht, kein dauerhaftes Archiv: Es wird keine Kopie der Beiträge im Repository gespeichert.
 
 Die feste Konto-ID steht im `data-actor`-Attribut in `JournalFrame.tsx`, die Darstellung in `quartz/static/wsocial-feed.js`. Wenn der Abruf fehlschlägt oder JavaScript deaktiviert ist, bleibt der Link zum Profil verfügbar. Die Website speichert keine Zugangsdaten und lädt kein Social-Media-Widget.
 

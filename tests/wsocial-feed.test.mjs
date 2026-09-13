@@ -56,6 +56,39 @@ test("rich-text offsets preserve emoji, accents, and link labels", () => {
   ])
 })
 
+test("quote posts are excluded entirely, including media quotes and unavailable originals", () => {
+  const date = "2026-09-13T12:00:00Z"
+  const quotes = [
+    entry("quote", date, {
+      record: { text: "My comment", createdAt: date, embed: { $type: "app.bsky.embed.record" } },
+    }),
+    entry("media-quote", date, {
+      record: {
+        text: "My photo and quote",
+        createdAt: date,
+        embed: { $type: "app.bsky.embed.recordWithMedia" },
+      },
+    }),
+    entry("view-quote", date, {
+      embed: {
+        $type: "app.bsky.embed.record#view",
+        record: { $type: "app.bsky.embed.record#viewNotFound" },
+      },
+    }),
+    entry("view-media-quote", date, { embed: { $type: "app.bsky.embed.recordWithMedia#view" } }),
+  ]
+  const originals = [
+    entry("text", date),
+    entry("images", date, { embed: { $type: "app.bsky.embed.images#view" } }),
+    entry("video", date, { embed: { $type: "app.bsky.embed.video#view" } }),
+    entry("link", date, { embed: { $type: "app.bsky.embed.external#view" } }),
+  ]
+  assert.deepEqual(
+    selectPosts([...quotes, ...originals], actor).map((post) => post.uri),
+    originals.map((item) => item.post.uri),
+  )
+})
+
 test("unsafe URLs and invalid or overlapping facets leave text intact", () => {
   const text = "👋 <script>alert(1)</script>"
   const length = new TextEncoder().encode(text).length

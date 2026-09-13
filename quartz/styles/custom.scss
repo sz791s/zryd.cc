@@ -284,22 +284,6 @@ body {
   line-height: 1.65;
   margin: 0;
 }
-.journal-main .social-post .social-quote {
-  margin: 1.15rem 0 0;
-  padding: 0 0 0 1rem;
-  border-left: 2px solid var(--lightgray);
-}
-.social-quote .social-quote-author {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-  text-decoration: none;
-}
-.journal-main .social-quote .social-text {
-  font-size: 0.9rem;
-  color: var(--gray);
-}
 .social-post .social-preview {
   display: flex;
   flex-direction: column;
@@ -355,11 +339,6 @@ body {
 .social-video span {
   display: block;
   margin-top: 0.5rem;
-}
-.social-quote-link {
-  display: inline-block;
-  margin-top: 1rem;
-  font-size: 0.85rem;
 }
 .feed-status {
   color: var(--gray);
