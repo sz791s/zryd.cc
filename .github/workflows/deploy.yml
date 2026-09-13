@@ -5,24 +5,65 @@ on:
     branches:
       - main
   workflow_dispatch:
+  schedule:
+    - cron: "7,22,37,52 * * * *"
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: github-pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    outputs:
+      revision: ${{ steps.save.outputs.revision }}
+    steps:
+      - name: Aktuellen Stand auschecken
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Node.js einrichten
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Importer prüfen
+        run: node --test tests/wsocial-feed.test.mjs tests/wsocial-archive.test.mjs
+
+      - name: Originalposts und Bilder sichern
+        run: node scripts/sync-wsocial.mjs
+
+      - name: Archiv in GitHub speichern
+        id: save
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add archive/wsocial quartz/static/wsocial
+          if ! git diff --cached --quiet; then
+            git commit -m 'Archive W Social posts'
+          fi
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "revision=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
   build:
+    needs: archive
     runs-on: ubuntu-latest
     steps:
       - name: Repository auschecken
         uses: actions/checkout@v6
         with:
+          ref: ${{ needs.archive.outputs.revision }}
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Node.js einrichten
         uses: actions/setup-node@v6
@@ -40,7 +81,7 @@ jobs:
         run: npx quartz build
 
       - name: Feed prüfen
-        run: node --test tests/wsocial-feed.test.mjs
+        run: node --test tests/wsocial-feed.test.mjs tests/wsocial-archive.test.mjs
 
       - name: Website-Artefakt hochladen
         uses: actions/upload-pages-artifact@v3
@@ -50,6 +91,9 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

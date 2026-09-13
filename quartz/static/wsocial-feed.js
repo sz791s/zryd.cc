@@ -1,4 +1,4 @@
-const API = "https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed"
+const ARCHIVE = new URL("./wsocial/posts.json", import.meta.url)
 const SOCIAL = "https://wsocial.eu"
 export const REFRESH_INTERVAL = 60_000
 const feedStates = new WeakMap()
@@ -17,6 +17,13 @@ export function safeUrl(value) {
   } catch {
     return null
   }
+}
+
+export function mediaUrl(value) {
+  if (typeof value === "string" && /^media\/[a-f0-9]{64}\.(jpg|png|webp|gif|avif)$/.test(value)) {
+    return new URL(value, ARCHIVE).href
+  }
+  return safeUrl(value)
 }
 
 export function postUrl(uri) {
@@ -120,8 +127,8 @@ function renderMedia(embed, original) {
   if (embed.$type === "app.bsky.embed.images#view") {
     const gallery = element("div", "social-images")
     for (const media of (embed.images ?? []).slice(0, 4)) {
-      const src = safeUrl(media.thumb)
-      const fullsize = safeUrl(media.fullsize)
+      const src = mediaUrl(media.thumb)
+      const fullsize = mediaUrl(media.fullsize)
       if (!src || !fullsize) continue
       const anchor = link(fullsize, undefined)
       const image = element("img")
@@ -152,7 +159,7 @@ function renderMedia(embed, original) {
     }
   } else if (embed.$type === "app.bsky.embed.video#view") {
     const videoLink = link(original, undefined, "social-video")
-    const thumbnail = safeUrl(embed.thumbnail)
+    const thumbnail = mediaUrl(embed.thumbnail)
     if (thumbnail) {
       const image = element("img")
       image.src = thumbnail
@@ -209,21 +216,20 @@ export async function loadFeed(root) {
   }
   retry.hidden = true
   try {
-    const url = new URL(API)
-    url.search = new URLSearchParams({
-      actor: root.dataset.actor,
-      filter: "posts_no_replies",
-      limit: "50",
-    })
-    const response = await fetch(url, {
+    const response = await fetch(ARCHIVE, {
       credentials: "omit",
       referrerPolicy: "no-referrer",
+      cache: "no-store",
       signal: AbortSignal.timeout(12000),
     })
     if (!response.ok) throw new Error(`Feed HTTP ${response.status}`)
     const data = await response.json()
-    if (!Array.isArray(data.feed)) throw new Error("Invalid feed response")
-    const posts = selectPosts(data.feed, root.dataset.actor)
+    if (data.schemaVersion !== 1 || data.actor !== root.dataset.actor || !Array.isArray(data.posts))
+      throw new Error("Invalid archive response")
+    const posts = selectPosts(
+      data.posts.map((post) => ({ post })),
+      root.dataset.actor,
+    )
     // Reuse unchanged posts so periodic checks preserve focus and already loaded images.
     const nextItems = new Map()
     posts.forEach((post, index) => {

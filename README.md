@@ -25,13 +25,22 @@ Die Website ist unter **https://sz791s.github.io/zryd.cc/** erreichbar. GitHub P
 
 ## W-Social-Feed
 
-Auf der Startseite werden bis zu zehn der neuesten eigenen Beiträge von `simonzryd.wsocial.eu` angezeigt. Der Feed wird bei jedem Seitenaufruf über die öffentliche AT-Protocol-Schnittstelle von `public.api.bsky.app` geladen und bei sichtbarer Seite etwa jede Minute aktualisiert. Bei der Rückkehr zu einem länger inaktiven Tab oder nach Wiederherstellung der Verbindung wird erneut geprüft. Ein Login oder erneutes Veröffentlichen der Website ist dafür nicht nötig. Reposts, Antworten und komplette Quote-Posts (auch mit Bildern oder Videos) werden ausgeschlossen. Eigene Bilder und Linkvorschauen bleiben erhalten; Videos führen zum Original auf W Social.
+Die eigenen Originalposts von `simonzryd.wsocial.eu` werden automatisch nach GitHub kopiert. Auf der Website erscheinen weiterhin die zehn neuesten Beiträge im gleichen Layout, mit Bildern, Linkvorschauen und Links zu W Social. Reposts, Antworten und komplette Quote-Posts werden ausgeschlossen.
 
-Unveränderte Beiträge werden beim Aktualisieren nicht neu gezeichnet. Bei einem vorübergehenden Fehler bleiben die zuletzt geladenen Beiträge stehen. Der Feed ist eine Live-Ansicht, kein dauerhaftes Archiv: Es wird keine Kopie der Beiträge im Repository gespeichert.
+Der Workflow `.github/workflows/deploy.yml` läuft bei Änderungen, manuell und ungefähr alle 15 Minuten. Er importiert alle erreichbaren Originalposts über die öffentliche AT-Protocol-Schnittstelle, speichert nur tatsächliche Änderungen als Commit und veröffentlicht das gespeicherte Archiv im selben Durchlauf. Dafür sind keine W-Social-Zugangsdaten und kein persönlicher GitHub-Token nötig. Der Mac kann ausgeschaltet bleiben.
 
-Die feste Konto-ID steht im `data-actor`-Attribut in `JournalFrame.tsx`, die Darstellung in `quartz/static/wsocial-feed.js`. Wenn der Abruf fehlschlägt oder JavaScript deaktiviert ist, bleibt der Link zum Profil verfügbar. Die Website speichert keine Zugangsdaten und lädt kein Social-Media-Widget.
+- `archive/wsocial/`: ein Markdown-Dokument pro Post, auch in Obsidian lesbar. Diese automatisch erzeugten Dateien am besten nicht direkt bearbeiten; der nächste Import übernimmt wieder den Text von W Social.
+- `quartz/static/wsocial/posts.json`: alle gespeicherten Posts, Datumsangaben, Linkvorschauen und Quellen für die Website.
+- `quartz/static/wsocial/media/`: lokale Bilddateien und Vorschaubilder. Videos werden als Text, Metadaten und Vorschaubild gesichert; die eigentliche Videodatei bleibt bei W Social.
+- `scripts/sync-wsocial.mjs`: Importer mit vollständiger Seitennavigation und Wiederverwendung bereits gespeicherter Bilder.
 
-Prüfung des Feed-Parsers: `node --test tests/wsocial-feed.test.mjs`.
+Bereits archivierte Posts werden nicht automatisch gelöscht, wenn sie bei W Social verschwinden. Updates eines weiterhin vorhandenen Originalposts werden übernommen; frühere Fassungen stehen in der Git-Historie. Bei einem fehlgeschlagenen Import bleibt die zuvor veröffentlichte Website verfügbar. Ein Fehler oder eine leere Antwort leert das bestehende Archiv nicht.
+
+Der Browser lädt den Feed und die Bilder von der eigenen Website und prüft bei sichtbarer Seite etwa jede Minute auf ein neues veröffentlichtes Archiv. Er benötigt dafür keine direkte Verbindung zu W Social. Unveränderte Posts behalten ihre Darstellung; nach einem vorübergehenden Ladefehler bleiben vorhandene Beiträge stehen. Die feste Konto-ID steht in `scripts/sync-wsocial.mjs` und im `data-actor`-Attribut in `JournalFrame.tsx`.
+
+[GitHub kann geplante Läufe verzögern und deaktiviert sie nach 60 Tagen ohne Repository-Aktivität](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule). In diesem Fall den Workflow unter Actions wieder aktivieren; gespeicherte Inhalte bleiben verfügbar. Ein manueller Lauf ist dort jederzeit möglich.
+
+Lokal importieren: `node scripts/sync-wsocial.mjs`. Prüfungen: `node --test tests/wsocial-feed.test.mjs tests/wsocial-archive.test.mjs`.
 
 ## Gestaltung
 
