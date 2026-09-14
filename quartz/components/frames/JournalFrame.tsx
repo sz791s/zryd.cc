@@ -5,6 +5,9 @@ import { resolveRelative } from "../../util/path"
 const dateLabel = (date: Date) =>
   new Intl.DateTimeFormat("de-CH", { day: "numeric", month: "long", year: "numeric" }).format(date)
 
+const frontmatterText = (value: unknown, fallback: string) =>
+  typeof value === "string" && value.trim() ? value.trim() : fallback
+
 export const JournalFrame: PageFrame = {
   name: "journal",
   render({ componentData, header, pageBody: Content }) {
@@ -12,6 +15,11 @@ export const JournalFrame: PageFrame = {
     const slug = fileData.slug ?? ("index" as FullSlug)
     const home = slug === "index"
     const about = slug === "über-mich"
+    const overtitle = frontmatterText(
+      fileData.frontmatter?.overtitle,
+      home ? "Ein persönliches Notizbuch" : about ? "Hallo." : "Notizen",
+    )
+    const wsocialTitle = frontmatterText(fileData.frontmatter?.wsocialTitle, "Beiträge")
     const href = (target: string) => resolveRelative(slug, target as FullSlug)
     const notes = allFiles
       .filter(
@@ -60,9 +68,7 @@ export const JournalFrame: PageFrame = {
           tabIndex={-1}
         >
           <div class="journal-heading">
-            <p class="journal-eyebrow">
-              {home ? "Ein persönliches Notizbuch" : about ? "Hallo." : "Notizen"}
-            </p>
+            <p class="journal-eyebrow">{overtitle}</p>
             <h1>{fileData.frontmatter?.title ?? "Seite nicht gefunden"}</h1>
             {isNote && fileData.dates && (
               <time class="journal-date" dateTime={fileData.dates.created.toISOString()}>
@@ -87,7 +93,7 @@ export const JournalFrame: PageFrame = {
               data-actor="did:plc:jaizqvad23fmiexrhvhrc4fh"
             >
               <div class="section-heading">
-                <h2 id="feed-title">Beiträge</h2>
+                <h2 id="feed-title">{wsocialTitle}</h2>
                 <a
                   href="https://wsocial.eu/profile/simonzryd.wsocial.eu"
                   target="_blank"

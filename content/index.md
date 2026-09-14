@@ -3,6 +3,7 @@ title: Simon Zryd
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 type: page
 overtitle: Whatever
+wsocialTitle: Beiträge
 ---
 
 Lorem ipsum dolor sit amet Dolor.
