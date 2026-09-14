@@ -1,6 +1,8 @@
 ---
 title: Titel des Beitrags
 description: Kurze Beschreibung für Vorschauen und Suchmaschinen.
+overtitle:
+type:
 date: 2026-09-10
 draft: true
 tags:
