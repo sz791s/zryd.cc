@@ -1,15 +1,9 @@
 ---
 title: Simon Zryd
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+description: 
 type: page
-overtitle: Whatever
-wsocialTitle: Beiträge
+overtitle: About
+wsocialTitle: Let's connect on social media
 ---
 
-Lorem ipsum dolor sit amet Dolor.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-Then this
