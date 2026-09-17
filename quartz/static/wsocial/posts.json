@@ -2,8 +2,60 @@
   "schemaVersion": 1,
   "actor": "did:plc:jaizqvad23fmiexrhvhrc4fh",
   "handle": "simonzryd.wsocial.eu",
-  "updatedAt": "2026-09-16T00:32:08.100Z",
+  "updatedAt": "2026-09-17T14:28:39.771Z",
   "posts": [
+    {
+      "uri": "at://did:plc:jaizqvad23fmiexrhvhrc4fh/app.bsky.feed.post/3mvpcwq56bw2k",
+      "cid": "bafyreifmlstcepr7cowhd5kda7heg7zikfa5snd5j3b6wwcfzdwumfto4m",
+      "author": {
+        "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
+        "handle": "simonzryd.wsocial.eu"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-09-17T09:15:23.798Z",
+        "embed": {
+          "$type": "app.bsky.embed.images",
+          "images": [
+            {
+              "alt": "A smartphone screen displaying a list of data points with bar graphs. The background is white. The first data point shows a title \"Einheiten\" and a number 87 in blue, with a green upward arrow. The second data point shows a title \"Gewinn\" and a number 4.89 in blue, with a green upward arrow. The numbers and titles are in black text. The bars in the graphs are blue. The time \"11:11\" is displayed in the upper left corner of the screen.",
+              "aspectRatio": {
+                "height": 2622,
+                "width": 1206
+              },
+              "image": {
+                "$type": "blob",
+                "ref": {
+                  "$link": "bafkreid3gcjmqddw3f5bfiaf6gcn5nkmr6z67lgqswsegyjfuxfhr2jc3u"
+                },
+                "mimeType": "image/jpeg",
+                "size": 530065
+              }
+            }
+          ]
+        },
+        "facets": [],
+        "langs": [
+          "en"
+        ],
+        "text": "I'm not going to lie, it's quite exciting when someone decides my app is worth paying for! Only one and that's totally fine. "
+      },
+      "originalUrl": "https://wsocial.eu/profile/did%3Aplc%3Ajaizqvad23fmiexrhvhrc4fh/post/3mvpcwq56bw2k",
+      "embed": {
+        "$type": "app.bsky.embed.images#view",
+        "images": [
+          {
+            "thumb": "media/3a6f44f5fede0048678933ea3fd4e06165c03a7c8259ed0714764e474294f18b.webp",
+            "fullsize": "media/79d15edfa6662c85f7b1a040972f21744baa976a48c0c4f1cd6665661d8d8191.webp",
+            "alt": "A smartphone screen displaying a list of data points with bar graphs. The background is white. The first data point shows a title \"Einheiten\" and a number 87 in blue, with a green upward arrow. The second data point shows a title \"Gewinn\" and a number 4.89 in blue, with a green upward arrow. The numbers and titles are in black text. The bars in the graphs are blue. The time \"11:11\" is displayed in the upper left corner of the screen.",
+            "aspectRatio": {
+              "height": 2622,
+              "width": 1206
+            }
+          }
+        ]
+      }
+    },
     {
       "uri": "at://did:plc:jaizqvad23fmiexrhvhrc4fh/app.bsky.feed.post/3mvlfczx6in2k",
       "cid": "bafyreigggc7s4nyo63wwxktbw5ak3oimenowvkd2vgssjj42shrb6mrff4",
@@ -860,6 +912,8 @@
     "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreibx7o7tm2gqmhsylqi4ph42iy2w3cfipv3zgo4stmouynpaniv6si": "media/8664eea6cca5c465a82c981bc48303743aa28751a0d225a33487db3f3a452367.webp",
     "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreihlehvcnyno3k5yfbm7i2hgvgbev5ylsx6t43ha5d4svy42nxw26u": "media/4e6007f603e18fe6586c87e8ea1a60371c221133883b37dd18e2d1afc45f433b.webp",
     "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreibxd76un5zmn74edpsmn5pb4g5xfjnj7p5gffnwwwidtyrrf2aq2y": "media/758633850a22bcaa52beb9364d32f804be879d1e1a6301ca0128880bcac403e8.webp",
-    "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreibxd76un5zmn74edpsmn5pb4g5xfjnj7p5gffnwwwidtyrrf2aq2y": "media/646b38851f0abd5c7b9f2ec832ba85ddaf897a47ec4ab41dc0edcdffb51f2328.webp"
+    "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreibxd76un5zmn74edpsmn5pb4g5xfjnj7p5gffnwwwidtyrrf2aq2y": "media/646b38851f0abd5c7b9f2ec832ba85ddaf897a47ec4ab41dc0edcdffb51f2328.webp",
+    "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreid3gcjmqddw3f5bfiaf6gcn5nkmr6z67lgqswsegyjfuxfhr2jc3u": "media/3a6f44f5fede0048678933ea3fd4e06165c03a7c8259ed0714764e474294f18b.webp",
+    "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreid3gcjmqddw3f5bfiaf6gcn5nkmr6z67lgqswsegyjfuxfhr2jc3u": "media/79d15edfa6662c85f7b1a040972f21744baa976a48c0c4f1cd6665661d8d8191.webp"
   }
 }
