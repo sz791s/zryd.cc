@@ -2,8 +2,39 @@
   "schemaVersion": 1,
   "actor": "did:plc:jaizqvad23fmiexrhvhrc4fh",
   "handle": "simonzryd.wsocial.eu",
-  "updatedAt": "2026-09-17T14:28:39.771Z",
+  "updatedAt": "2026-09-19T21:43:10.010Z",
   "posts": [
+    {
+      "uri": "at://did:plc:jaizqvad23fmiexrhvhrc4fh/app.bsky.feed.post/3mvvhrtix2k2z",
+      "cid": "bafyreibpzbjug3ah5wfm35ox3dmstzwmkorowatpis6evt4ya3lfgseiim",
+      "author": {
+        "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
+        "handle": "simonzryd.wsocial.eu"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-09-19T19:58:08.427Z",
+        "facets": [
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "wsocial"
+              }
+            ],
+            "index": {
+              "byteEnd": 163,
+              "byteStart": 155
+            }
+          }
+        ],
+        "langs": [
+          "en"
+        ],
+        "text": "I really enjoy using Indigo for Bluesky and Mastodon, but it constantly kicks out my wsocial account. I’m not sure if this is an app issue or related to #wsocial."
+      },
+      "originalUrl": "https://wsocial.eu/profile/did%3Aplc%3Ajaizqvad23fmiexrhvhrc4fh/post/3mvvhrtix2k2z"
+    },
     {
       "uri": "at://did:plc:jaizqvad23fmiexrhvhrc4fh/app.bsky.feed.post/3mvpcwq56bw2k",
       "cid": "bafyreifmlstcepr7cowhd5kda7heg7zikfa5snd5j3b6wwcfzdwumfto4m",
