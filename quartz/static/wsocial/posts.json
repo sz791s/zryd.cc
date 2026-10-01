@@ -2,8 +2,51 @@
   "schemaVersion": 1,
   "actor": "did:plc:jaizqvad23fmiexrhvhrc4fh",
   "handle": "simonzryd.wsocial.eu",
-  "updatedAt": "2026-10-01T11:51:14.881Z",
+  "updatedAt": "2026-10-01T17:38:34.607Z",
   "posts": [
+    {
+      "uri": "at://did:plc:jaizqvad23fmiexrhvhrc4fh/app.bsky.feed.post/3mwsx332ocr2q",
+      "cid": "bafyreiav2md3ijcklyguggq25ds4pvpxhtt4vgkzpahowylrsaa3wgewla",
+      "author": {
+        "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
+        "handle": "simonzryd.wsocial.eu"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-01T13:18:56.800Z",
+        "facets": [
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "JollyPod"
+              }
+            ],
+            "index": {
+              "byteEnd": 36,
+              "byteStart": 27
+            }
+          },
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "indiedev"
+              }
+            ],
+            "index": {
+              "byteEnd": 178,
+              "byteStart": 169
+            }
+          }
+        ],
+        "langs": [
+          "en"
+        ],
+        "text": "A few weeks into releasing #JollyPod, it'd need some updates. It's still version 1.0 and to the one paying subscriber I own it. \n\nHang in there, 1.0.1 is coming soon. \n\n#indiedev "
+      },
+      "originalUrl": "https://wsocial.eu/profile/did%3Aplc%3Ajaizqvad23fmiexrhvhrc4fh/post/3mwsx332ocr2q"
+    },
     {
       "uri": "at://did:plc:jaizqvad23fmiexrhvhrc4fh/app.bsky.feed.post/3mwsfmbfokw2q",
       "cid": "bafyreiggotxa5alczb4uhmfyyn3czzzkho4uwojlw53n3km4asqq4estaq",
