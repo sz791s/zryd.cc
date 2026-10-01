@@ -2,8 +2,129 @@
   "schemaVersion": 1,
   "actor": "did:plc:jaizqvad23fmiexrhvhrc4fh",
   "handle": "simonzryd.wsocial.eu",
-  "updatedAt": "2026-09-29T14:19:02.404Z",
+  "updatedAt": "2026-10-01T11:51:14.881Z",
   "posts": [
+    {
+      "uri": "at://did:plc:jaizqvad23fmiexrhvhrc4fh/app.bsky.feed.post/3mwsfmbfokw2q",
+      "cid": "bafyreiggotxa5alczb4uhmfyyn3czzzkho4uwojlw53n3km4asqq4estaq",
+      "author": {
+        "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
+        "handle": "simonzryd.wsocial.eu"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-01T08:06:25.655Z",
+        "embed": {
+          "$type": "app.bsky.embed.external",
+          "external": {
+            "$type": "app.bsky.embed.external#external",
+            "description": "Ad | A big thank you to MPB for sponsoring this video. To find out more, visit:\n\nmpb.com UK: https://prf.hn/l/zjy84NB\nmpb.com USA: https://prf.hn/l/4mdDBYq\nmpb.com EU: https://prf.hn/l/ZQ8nPWb\nmpb.com Germany: https://prf.hn/l/yzamZzA\nmpb.com France: https://prf.hn/l/da3dyaN\n\n---\n\nThis week I'm talking about what makes a fun camera, and why the best cameras often aren't the most enjoyable to use, for me atleast. My Sony A1 II is undeniably the best camera I've ever used in basically every measurable way, except for the fact that I'm not drawn to take photographs with it...\n\nMy New Book: https://www.jamespopsys.com/human-nature-book\n\nMy bags & cameras: https://www.jamespopsys.com/gear\n\nThe Prints: https://www.jamespopsys.com/store?category=Prints\n\nCustom Prints: https://www.jamespopsys.com/customprints\n\nNew Presets: https://jamespopsys.com/mypresets\n\nNewsletter sign up: https://www.jamespopsys.com/newsletter\n\n---\n\nMUSIC:\n\nI get all my music for the videos from MusicBed, sign up for your free account: http://share.mscbd.fm/jamespopsys\n\n\nMB017AOIKS1KOLL\n\nMB01BQQID2IPQWX",
+            "thumb": {
+              "$type": "blob",
+              "ref": {
+                "$link": "bafkreias663cwvimcjsilvgcqqpgkpgwxkx36ubmw4adcf2g3lwtnyiiby"
+              },
+              "mimeType": "image/jpeg",
+              "size": 133510
+            },
+            "title": "\"Fun\" Cameras.",
+            "uri": "https://youtu.be/oSwbZOvJx18?si=kqBLsNjuP_jHiwp_"
+          }
+        },
+        "facets": [],
+        "langs": [
+          "en"
+        ],
+        "text": "Found this video by James Popsys so well explained why fun cameras matter. \n\nIt's not about quality anymore. \n\nHe gives some good tips on how to achieve it without buying a new camera. \n- use manual focus\n- use the aperture ring\n- don't show photo previews\n- …\n\nWorth watching and subscribing."
+      },
+      "originalUrl": "https://wsocial.eu/profile/did%3Aplc%3Ajaizqvad23fmiexrhvhrc4fh/post/3mwsfmbfokw2q",
+      "embed": {
+        "$type": "app.bsky.embed.external#view",
+        "external": {
+          "uri": "https://youtu.be/oSwbZOvJx18?si=kqBLsNjuP_jHiwp_",
+          "title": "\"Fun\" Cameras.",
+          "description": "Ad | A big thank you to MPB for sponsoring this video. To find out more, visit:\n\nmpb.com UK: https://prf.hn/l/zjy84NB\nmpb.com USA: https://prf.hn/l/4mdDBYq\nmpb.com EU: https://prf.hn/l/ZQ8nPWb\nmpb.com Germany: https://prf.hn/l/yzamZzA\nmpb.com France: https://prf.hn/l/da3dyaN\n\n---\n\nThis week I'm talking about what makes a fun camera, and why the best cameras often aren't the most enjoyable to use, for me atleast. My Sony A1 II is undeniably the best camera I've ever used in basically every measurable way, except for the fact that I'm not drawn to take photographs with it...\n\nMy New Book: https://www.jamespopsys.com/human-nature-book\n\nMy bags & cameras: https://www.jamespopsys.com/gear\n\nThe Prints: https://www.jamespopsys.com/store?category=Prints\n\nCustom Prints: https://www.jamespopsys.com/customprints\n\nNew Presets: https://jamespopsys.com/mypresets\n\nNewsletter sign up: https://www.jamespopsys.com/newsletter\n\n---\n\nMUSIC:\n\nI get all my music for the videos from MusicBed, sign up for your free account: http://share.mscbd.fm/jamespopsys\n\n\nMB017AOIKS1KOLL\n\nMB01BQQID2IPQWX",
+          "thumb": "media/e598afcba620a9285048226762e794631e92c40b418de96ad2a1f84d49abf314.webp"
+        }
+      }
+    },
+    {
+      "uri": "at://did:plc:jaizqvad23fmiexrhvhrc4fh/app.bsky.feed.post/3mwsfb7llwa2q",
+      "cid": "bafyreiad3rgopx6fdjvtsenxhsfqqkz2ctmjopvwowkvwmkyh2vw3i4ek4",
+      "author": {
+        "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
+        "handle": "simonzryd.wsocial.eu"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-01T08:00:14.486Z",
+        "embed": {
+          "$type": "app.bsky.embed.images",
+          "images": [
+            {
+              "alt": "A small palm tree on a sandy beach. A calm ocean stretches out to the horizon. A person standing in the water. The sky is a pale blue.",
+              "aspectRatio": {
+                "height": 3707,
+                "width": 2966
+              },
+              "image": {
+                "$type": "blob",
+                "ref": {
+                  "$link": "bafkreifs32xyolshtnsz6d7ze44wafd7nk3barwf3o6nd35gdriwapahkq"
+                },
+                "mimeType": "image/jpeg",
+                "size": 821948
+              }
+            }
+          ]
+        },
+        "facets": [
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "fuji"
+              }
+            ],
+            "index": {
+              "byteEnd": 57,
+              "byteStart": 52
+            }
+          },
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#link",
+                "uri": "https://apps.apple.com/app/id6737783441"
+              }
+            ],
+            "index": {
+              "byteEnd": 97,
+              "byteStart": 66
+            }
+          }
+        ],
+        "langs": [
+          "en"
+        ],
+        "text": "Using !Camera again to hold me back from buying the #fuji Half. \n\napps.apple.com/app/id6737783441"
+      },
+      "originalUrl": "https://wsocial.eu/profile/did%3Aplc%3Ajaizqvad23fmiexrhvhrc4fh/post/3mwsfb7llwa2q",
+      "embed": {
+        "$type": "app.bsky.embed.images#view",
+        "images": [
+          {
+            "thumb": "media/9708bef6f116f4f8bb698eed13121d06e681993baa85f0a2a67379554a3b4c9d.webp",
+            "fullsize": "media/29ce647625636c56801a5ee707a4cd46a583953e651011755e9f686e0968dc43.webp",
+            "alt": "A small palm tree on a sandy beach. A calm ocean stretches out to the horizon. A person standing in the water. The sky is a pale blue.",
+            "aspectRatio": {
+              "height": 3707,
+              "width": 2966
+            }
+          }
+        ]
+      }
+    },
     {
       "uri": "at://did:plc:jaizqvad23fmiexrhvhrc4fh/app.bsky.feed.post/3mwnh3a42rd2c",
       "cid": "bafyreif6xz3tewhav5ln25clbrsge62dz2olrqf3rahbaofhhpamhvzdhu",
@@ -1077,6 +1198,9 @@
     "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreiaex6ivpxc44zabtlfqp3cri77h4ysg4q7kwa357oroaeut36jxbe": "media/63f22f825b3b29dc3412f0174bc7156cdb8ed74712a3b0adfc144db489e8bb99.webp",
     "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreiaex6ivpxc44zabtlfqp3cri77h4ysg4q7kwa357oroaeut36jxbe": "media/0335f50440837e3a5385f14437f965a6ba44f62ad55bf93de65bcbd1c46fc814.webp",
     "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreietgmqsqvzfznrupyylw6zcmzva72tsixarq2o3uh54teja4h24fi": "media/1825e2724fcd26b5e87d6c2d95cb8ac9b53d3ea4bb13ebe48e5a6ea72e0b117c.webp",
-    "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreietgmqsqvzfznrupyylw6zcmzva72tsixarq2o3uh54teja4h24fi": "media/55e820431a721e52e511ab6692c06c08d60dc24820106bc4e6fd8aeabe75221e.webp"
+    "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreietgmqsqvzfznrupyylw6zcmzva72tsixarq2o3uh54teja4h24fi": "media/55e820431a721e52e511ab6692c06c08d60dc24820106bc4e6fd8aeabe75221e.webp",
+    "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreias663cwvimcjsilvgcqqpgkpgwxkx36ubmw4adcf2g3lwtnyiiby": "media/e598afcba620a9285048226762e794631e92c40b418de96ad2a1f84d49abf314.webp",
+    "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreifs32xyolshtnsz6d7ze44wafd7nk3barwf3o6nd35gdriwapahkq": "media/9708bef6f116f4f8bb698eed13121d06e681993baa85f0a2a67379554a3b4c9d.webp",
+    "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreifs32xyolshtnsz6d7ze44wafd7nk3barwf3o6nd35gdriwapahkq": "media/29ce647625636c56801a5ee707a4cd46a583953e651011755e9f686e0968dc43.webp"
   }
 }
