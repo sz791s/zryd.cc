@@ -2,8 +2,73 @@
   "schemaVersion": 1,
   "actor": "did:plc:jaizqvad23fmiexrhvhrc4fh",
   "handle": "simonzryd.wsocial.eu",
-  "updatedAt": "2026-10-04T21:40:11.984Z",
+  "updatedAt": "2026-10-05T14:26:00.640Z",
   "posts": [
+    {
+      "uri": "at://did:plc:jaizqvad23fmiexrhvhrc4fh/app.bsky.feed.post/3mx52nqs5k42j",
+      "cid": "bafyreibdrvxhrubumwdq3hjatmligxfd2i2khy4haryvygossrfby4wmpi",
+      "author": {
+        "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
+        "handle": "simonzryd.wsocial.eu"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-05T13:49:41.653Z",
+        "embed": {
+          "$type": "app.bsky.embed.images",
+          "images": [
+            {
+              "alt": "A grid of six rounded rectangles with different colours. The top left is a purple rectangle with the word \"inbox\" and the number \"0\" next to a key symbol. The top right is an orange rectangle with the words \"read it later\" and the number \"6\". The middle left is a grey rectangle with the word \"Completed\" and a check mark symbol. The middle right is a purple rectangle with the word \"inbox\" and the number \"0\" next to a list symbol. The bottom left is a purple rectangle with the word \"inbox\" and the number \"0\" next to a list symbol. The bottom right is an orange rectangle with the words \"read it later\" and the number \"8\".",
+              "aspectRatio": {
+                "height": 1132,
+                "width": 1206
+              },
+              "image": {
+                "$type": "blob",
+                "ref": {
+                  "$link": "bafkreib3l4yvilns5drhclztqj3yin6ttp7ybad75sbt6suerwopkvfily"
+                },
+                "mimeType": "image/jpeg",
+                "size": 577229
+              }
+            }
+          ]
+        },
+        "facets": [
+          {
+            "features": [
+              {
+                "$type": "app.bsky.richtext.facet#tag",
+                "tag": "onlyapple"
+              }
+            ],
+            "index": {
+              "byteEnd": 91,
+              "byteStart": 81
+            }
+          }
+        ],
+        "langs": [
+          "en"
+        ],
+        "text": "I guess it's good to know that Apple also doesn't manage a reliable iCloud sync. #onlyapple "
+      },
+      "originalUrl": "https://wsocial.eu/profile/did%3Aplc%3Ajaizqvad23fmiexrhvhrc4fh/post/3mx52nqs5k42j",
+      "embed": {
+        "$type": "app.bsky.embed.images#view",
+        "images": [
+          {
+            "thumb": "media/08f51ba260460a0c377384239108417405701fbea1b1c899a80b9510545c0039.webp",
+            "fullsize": "media/5186fcaf0bad58da24248631effe2eb04b8ea8a1de23b308755b10410ac62b50.webp",
+            "alt": "A grid of six rounded rectangles with different colours. The top left is a purple rectangle with the word \"inbox\" and the number \"0\" next to a key symbol. The top right is an orange rectangle with the words \"read it later\" and the number \"6\". The middle left is a grey rectangle with the word \"Completed\" and a check mark symbol. The middle right is a purple rectangle with the word \"inbox\" and the number \"0\" next to a list symbol. The bottom left is a purple rectangle with the word \"inbox\" and the number \"0\" next to a list symbol. The bottom right is an orange rectangle with the words \"read it later\" and the number \"8\".",
+            "aspectRatio": {
+              "height": 1132,
+              "width": 1206
+            }
+          }
+        ]
+      }
+    },
     {
       "uri": "at://did:plc:jaizqvad23fmiexrhvhrc4fh/app.bsky.feed.post/3mx2zwuxu242v",
       "cid": "bafyreiase4ak3m5sjwvevomrrckdgkgrjucborl3hvrdrtwkigb57tgl2a",
@@ -1275,6 +1340,8 @@
     "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreietgmqsqvzfznrupyylw6zcmzva72tsixarq2o3uh54teja4h24fi": "media/55e820431a721e52e511ab6692c06c08d60dc24820106bc4e6fd8aeabe75221e.webp",
     "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreias663cwvimcjsilvgcqqpgkpgwxkx36ubmw4adcf2g3lwtnyiiby": "media/e598afcba620a9285048226762e794631e92c40b418de96ad2a1f84d49abf314.webp",
     "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreifs32xyolshtnsz6d7ze44wafd7nk3barwf3o6nd35gdriwapahkq": "media/9708bef6f116f4f8bb698eed13121d06e681993baa85f0a2a67379554a3b4c9d.webp",
-    "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreifs32xyolshtnsz6d7ze44wafd7nk3barwf3o6nd35gdriwapahkq": "media/29ce647625636c56801a5ee707a4cd46a583953e651011755e9f686e0968dc43.webp"
+    "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreifs32xyolshtnsz6d7ze44wafd7nk3barwf3o6nd35gdriwapahkq": "media/29ce647625636c56801a5ee707a4cd46a583953e651011755e9f686e0968dc43.webp",
+    "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreib3l4yvilns5drhclztqj3yin6ttp7ybad75sbt6suerwopkvfily": "media/08f51ba260460a0c377384239108417405701fbea1b1c899a80b9510545c0039.webp",
+    "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:jaizqvad23fmiexrhvhrc4fh/bafkreib3l4yvilns5drhclztqj3yin6ttp7ybad75sbt6suerwopkvfily": "media/5186fcaf0bad58da24248631effe2eb04b8ea8a1de23b308755b10410ac62b50.webp"
   }
 }
