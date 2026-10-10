@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "actor": "did:plc:jaizqvad23fmiexrhvhrc4fh",
   "handle": "simonzryd.wsocial.eu",
-  "updatedAt": "2026-10-05T14:26:00.640Z",
+  "updatedAt": "2026-10-10T06:58:26.189Z",
   "posts": [
     {
       "uri": "at://did:plc:jaizqvad23fmiexrhvhrc4fh/app.bsky.feed.post/3mx52nqs5k42j",
       "cid": "bafyreibdrvxhrubumwdq3hjatmligxfd2i2khy4haryvygossrfby4wmpi",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -74,7 +74,7 @@
       "cid": "bafyreiase4ak3m5sjwvevomrrckdgkgrjucborl3hvrdrtwkigb57tgl2a",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -105,7 +105,7 @@
       "cid": "bafyreiav2md3ijcklyguggq25ds4pvpxhtt4vgkzpahowylrsaa3wgewla",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -148,7 +148,7 @@
       "cid": "bafyreiggotxa5alczb4uhmfyyn3czzzkho4uwojlw53n3km4asqq4estaq",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -192,7 +192,7 @@
       "cid": "bafyreiad3rgopx6fdjvtsenxhsfqqkz2ctmjopvwowkvwmkyh2vw3i4ek4",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -269,7 +269,7 @@
       "cid": "bafyreif6xz3tewhav5ln25clbrsge62dz2olrqf3rahbaofhhpamhvzdhu",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -393,7 +393,7 @@
       "cid": "bafyreibpzbjug3ah5wfm35ox3dmstzwmkorowatpis6evt4ya3lfgseiim",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -424,7 +424,7 @@
       "cid": "bafyreifmlstcepr7cowhd5kda7heg7zikfa5snd5j3b6wwcfzdwumfto4m",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -476,7 +476,7 @@
       "cid": "bafyreigggc7s4nyo63wwxktbw5ak3oimenowvkd2vgssjj42shrb6mrff4",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -494,7 +494,7 @@
       "cid": "bafyreie3bqndu6iarqefzzcayuhrp7lbe3voxyl5qdr3ngmd577i2tsmim",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -583,7 +583,7 @@
       "cid": "bafyreic45rjuevaowndghqm6pzyzz2rxug7lfeq2jqaj6qmqsi2a6xzwtu",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -627,7 +627,7 @@
       "cid": "bafyreiapjj3tbtyxfinggvtwaoxfdlnt36nnzbkhvgl2eml6hw57bgrj4e",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -658,7 +658,7 @@
       "cid": "bafyreia2wlwth3ceni6hiraemp5uw6pgei2mjnj2dlpxdu6snzqgna6inq",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -763,7 +763,7 @@
       "cid": "bafyreibmknjf6ong3rzjtzuuft6yvzvmbwbxflokk2a7vlxxli4ehep6wi",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -807,7 +807,7 @@
       "cid": "bafyreihjpx6dnatlowq2noo2ss36m7iqy7i2d4fis3hltrjkd3j2zf6cbq",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -872,7 +872,7 @@
       "cid": "bafyreiem6rsbvdzt3qp7otnj5cv2gmhud6hwplqjsasi5637fikgh7tn2e",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -937,7 +937,7 @@
       "cid": "bafyreihz64umerw3eob6tu2cpltjpyhpdi4txduhp26ov6y27cbc25quvu",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -968,7 +968,7 @@
       "cid": "bafyreifodu7ecif4qdhsyrkughiuhliuoodm3mqj6nmats6nwum3jwb2we",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -1027,7 +1027,7 @@
       "cid": "bafyreidcvh5rna56p67fxuozulr7a3xiba5cfwb7vr6yl7sciqiyleaeka",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -1059,7 +1059,7 @@
       "cid": "bafyreid5dhvksbnqznzpkpzewecttc5cqzjuzyf6emnoqtnxkwz43yyz2e",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -1106,7 +1106,7 @@
       "cid": "bafyreih7hhti42353a3nynuhi6z556i4zxf2dsqjiutl7iyjhn3bfh3mxi",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -1198,7 +1198,7 @@
       "cid": "bafyreifh2d5j7etefowwq2ck23yf6qlacjoh3ud6zivw2qhx4pfgx4o2ma",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -1215,7 +1215,7 @@
       "cid": "bafyreick3tmlsuh6aazsta4snszwg6k5ebsuzczgn2bxzwdbz6oxaavqoe",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
@@ -1266,7 +1266,7 @@
       "cid": "bafyreihpyugzr65qfarpna72wr3rz6nopunhfdv324objfc7uxv4yiqmly",
       "author": {
         "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
-        "handle": "simonzryd.wsocial.eu"
+        "handle": "handle.invalid"
       },
       "record": {
         "$type": "app.bsky.feed.post",
