@@ -2,8 +2,26 @@
   "schemaVersion": 1,
   "actor": "did:plc:jaizqvad23fmiexrhvhrc4fh",
   "handle": "simonzryd.wsocial.eu",
-  "updatedAt": "2026-10-12T01:25:05.490Z",
+  "updatedAt": "2026-10-27T23:15:02.095Z",
   "posts": [
+    {
+      "uri": "at://did:plc:jaizqvad23fmiexrhvhrc4fh/app.bsky.feed.post/3myv2kory7c2v",
+      "cid": "bafyreigmsqumpglysjsfyv4fj3vwp2mihbtvxitf46alp3d44e34upa33a",
+      "author": {
+        "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
+        "handle": "simonzryd.wsocial.eu"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-10-27T20:17:04.744Z",
+        "facets": [],
+        "langs": [
+          "en"
+        ],
+        "text": "It's expected to support the iPhone Duo without owning one, so I might as well add Apple CarPlay support without owning that either.\n\nTesting is a bit like navigating a minefield blindfolded, except you also have to build the mine detector."
+      },
+      "originalUrl": "https://wsocial.eu/profile/did%3Aplc%3Ajaizqvad23fmiexrhvhrc4fh/post/3myv2kory7c2v"
+    },
     {
       "uri": "at://did:plc:jaizqvad23fmiexrhvhrc4fh/app.bsky.feed.post/3mx52nqs5k42j",
       "cid": "bafyreibdrvxhrubumwdq3hjatmligxfd2i2khy4haryvygossrfby4wmpi",
