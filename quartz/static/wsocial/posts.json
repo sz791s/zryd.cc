@@ -2,8 +2,26 @@
   "schemaVersion": 1,
   "actor": "did:plc:jaizqvad23fmiexrhvhrc4fh",
   "handle": "simonzryd.wsocial.eu",
-  "updatedAt": "2026-10-27T23:15:02.095Z",
+  "updatedAt": "2026-11-02T18:47:05.373Z",
   "posts": [
+    {
+      "uri": "at://did:plc:jaizqvad23fmiexrhvhrc4fh/app.bsky.feed.post/3mzde7bugcf2v",
+      "cid": "bafyreiabrswlcdd5alektikzo4jinnidqcpibv4zi4as5xppxdr6jp7v54",
+      "author": {
+        "did": "did:plc:jaizqvad23fmiexrhvhrc4fh",
+        "handle": "simonzryd.wsocial.eu"
+      },
+      "record": {
+        "$type": "app.bsky.feed.post",
+        "createdAt": "2026-11-02T12:46:55.897Z",
+        "facets": [],
+        "langs": [
+          "en"
+        ],
+        "text": "Removing the color from Apple Music is just making the day a bit more black and white instead of coloured. :/"
+      },
+      "originalUrl": "https://wsocial.eu/profile/did%3Aplc%3Ajaizqvad23fmiexrhvhrc4fh/post/3mzde7bugcf2v"
+    },
     {
       "uri": "at://did:plc:jaizqvad23fmiexrhvhrc4fh/app.bsky.feed.post/3myv2kory7c2v",
       "cid": "bafyreigmsqumpglysjsfyv4fj3vwp2mihbtvxitf46alp3d44e34upa33a",
