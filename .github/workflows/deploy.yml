@@ -25,13 +25,13 @@ jobs:
       revision: ${{ steps.save.outputs.revision }}
     steps:
       - name: Aktuellen Stand auschecken
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: main
           fetch-depth: 0
 
       - name: Node.js einrichten
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24
 
@@ -59,14 +59,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Repository auschecken
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: ${{ needs.archive.outputs.revision }}
           fetch-depth: 0
           persist-credentials: false
 
       - name: Node.js einrichten
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
@@ -84,7 +84,7 @@ jobs:
         run: node --test tests/wsocial-feed.test.mjs tests/wsocial-archive.test.mjs
 
       - name: Website-Artefakt hochladen
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: public
 
@@ -100,4 +100,4 @@ jobs:
     steps:
       - name: Zu GitHub Pages veröffentlichen
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
